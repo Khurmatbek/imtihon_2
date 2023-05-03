@@ -679,7 +679,9 @@ img {
     background-color: #120b0b;
     opacity: 0.6;
 }
-
+.site-section-second__imga{
+transform: rotate(180deg);
+}
 .site-section-second__last-box {
     display: flex;
     align-items: center;
