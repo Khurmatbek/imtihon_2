@@ -43,10 +43,11 @@ html {
     height: 100vh;
 }
 
-
 body {
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     font-family: 'Futura PT';
@@ -57,6 +58,7 @@ body {
 }
 
 main {
+    flex-grow: 1;
     /* background-color: #e5e5e5; */
     background-image: url("./images/bg.png");
     width: 100%;
@@ -64,6 +66,18 @@ main {
     background-repeat: no-repeat;
 
 }
+  header, footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+  
+  main {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+
 
 img {
     display: block;
@@ -649,11 +663,14 @@ img {
     height: 50px;
     border: 0;
     background-color: #F9F8F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .site-section-second__bot:hover {
-    background-color: #762222;
+    background-color:  #FFFFFF;
     opacity: 0.8;
 }
 
@@ -1078,14 +1095,16 @@ input:hover {
 }
 
 .site-section-last {
-    margin-bottom: 247px;  
+    margin-bottom: 247px;
 }
-.site-section-last__wrapper{
-    width: 1470px;
+
+.site-section-last__wrapper {
+    max-width: 1700px;
     margin: 0 auto;
     display: flex;
-   
+
 }
+
 .site-section-last__wrapperin {
     max-width: 1600px;
     width: 100%;
@@ -1093,7 +1112,7 @@ input:hover {
     margin: 0 auto;
     background-color: #333333;
     background-image: url("./icons/fisbgbgbg.png");
-    background-size: 1000px 639px;
+    background-size: 999px 639px;
     /* background-position: calc(50% + 250px) calc(50%); */
     background-repeat: no-repeat;
 
@@ -1201,12 +1220,19 @@ input:hover {
 
 .site-footer__wrapper {
     display: flex;
-    align-items: center;
+    align-items: start;
+
 }
 
 .site-footer__img {
     display: block;
     margin-right: 67px;
+}
+.site-footer__img:hover {
+ opacity: 0.6;
+}
+.site-footer__img:active {
+   opacity: 0.8;
 }
 
 .site-footer__list {
@@ -1218,28 +1244,96 @@ input:hover {
 
 
 .site-footer__item {
+   
     margin-right: 100px;
     margin-bottom: 14px;
 }
+.site-footer__link{
+    transition: color 0.3s ease;
+}
+.site-footer__address{
+    transition: color 0.3s ease;
+}
+.site-footer__time{
+    transition: color 0.3s ease;
+}
+
+.site-footer__link:hover {
+    color: #FFBD54;
+}
+
+.site-footer__link:active {
+    color: rgba(51, 51, 51, 0.7);
+}
+
+.site-footer__time:hover {
+    color: #FFBD54;
+}
+.site-footer__time:active {
+    color: rgba(51, 51, 51, 0.7);
+}
+
+.site-footer__address:hover {
+    color: #FFBD54;
+}
+.site-footer__address:active {
+    color: rgba(51, 51, 51, 0.7);
+}
 
 .site-footer__item-las {
+    transition: color 0.3s ease;
     margin-right: 157px;
+    margin-top: 16px;
     margin-bottom: 16px;
 }
 
 .site-footer__item-add {
+    position: relative;
 
     margin-right: 136px;
     margin-bottom: 3px;
 }
+.site-footer__item-add:first-child:before{
+    position:absolute;
+    content: "";
+    background-image: url("./icons/quarts.svg");
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    left: calc(50% - 85px);
+    top:5px; 
+}
 
 .site-footer__item-map {
+    position: relative;
 
     margin-right: 111px;
 }
+.site-footer__item-map:first-child:before{
+    position:absolute;
+    content: "";
+    background-image: url("./icons/house.svg");
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    left: calc(50% - 95px);
+    top:5px; 
+}
 
 .site-footer__item-tel {
+    position: relative;
     margin-bottom: 4px;
+    
+}
+.site-footer__item-tel:first-child:before{
+    position:absolute;
+    content: "";
+    background-image: url("./icons/phgone.svg");
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    left: calc(50% - 85px);
+    top:5px; 
 }
 
 .site-footer__link {
@@ -1248,6 +1342,10 @@ input:hover {
     font-size: 16px;
     line-height: 21px;
     color: #333333;
+}
+
+.site-footer__item_las {
+    margin-bottom: 16px;
 }
 
 .site-footer__time {
@@ -1259,7 +1357,7 @@ input:hover {
     color: #333333;
 }
 
-.site-footer__strong {}
+
 
 .site-footer__address {
     font-style: normal;
