@@ -1,5 +1,0 @@
-{
-    "emmet.showSuggestionsAsSnippets": true,
-    "typescript.suggest.objectLiteralMethodSnippets.enabled": true,
-    "javascript.suggest.classMemberSnippets.enabled": true
-}
